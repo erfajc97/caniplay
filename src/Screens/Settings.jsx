@@ -1,10 +1,9 @@
-
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function Main() {
+export default function Settings() {
   return (
     <View style={styles.container}>
-      <Text>Soy Main</Text>
+      <Text className="text-red-800">Soy Home</Text>
     </View>
   );
 }
