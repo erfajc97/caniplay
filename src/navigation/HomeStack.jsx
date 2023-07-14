@@ -1,15 +1,16 @@
-import { createStackNavigator } from "@react-navigation/stack";
+import { createStackNavigator } from '@react-navigation/stack';
 
-import Settings from "../Screens/Settings";
-import Home from "../Screens/Home";
-
+import Settings from '../Screens/Settings';
+import BottomTab from './BottomTab';
 
 export default function HomeStack() {
-   const HomeStack = createStackNavigator();
-    return(
-        <HomeStack.Navigator>
-            <HomeStack.Screen name="Home" component={Home} />
-        </HomeStack.Navigator>
-
-    )
+  const HomeStack = createStackNavigator();
+  return (
+    <HomeStack.Navigator screenOptions={{ headerShown: false }}>
+      <HomeStack.Screen name="Root" component={BottomTab} />
+      <HomeStack.Group screenOptions={{ headerShown: true }}>
+        <HomeStack.Screen name="Settings" component={Settings} />
+      </HomeStack.Group>
+    </HomeStack.Navigator>
+  );
 }

@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native';
+import { globalStyle } from '../styles/global';
 
 export default function Settings() {
   return (
     <View style={styles.container}>
-      <Text className="text-red-800">Soy Home</Text>
+      <Text style={globalStyle.title}>Setting</Text>
     </View>
   );
 }

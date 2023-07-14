@@ -1,14 +1,13 @@
-import { NavigationContainer } from "@react-navigation/native";
-import HomeStack from "./HomeStack";
+import { NavigationContainer } from '@react-navigation/native';
+import HomeStack from './HomeStack';
 
-const RootNavigator = () =>{
+const RootNavigator = () => {
+  return (
+    <NavigationContainer>
+      <HomeStack />
+      {/* <BottomTab /> */}
+    </NavigationContainer>
+  );
+};
 
-    return(
-        <NavigationContainer>
-            <HomeStack/>
-        </NavigationContainer>
-    )
-
-}
-
-export default RootNavigator
+export default RootNavigator;
