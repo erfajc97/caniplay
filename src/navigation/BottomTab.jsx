@@ -1,6 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../Screens/Home';
 import Profile from '../Screens/Profile';
+import Settings from '../Screens/Settings';
 import { AntDesign } from '@expo/vector-icons';
 
 const BottomTab = () => {
@@ -23,6 +24,15 @@ const BottomTab = () => {
         options={{
           tabBarIcon: ({ color }) => (
             <AntDesign name="user" size={24} color={color} />
+          ),
+        }}
+      />
+      <BtnTab.Screen
+        name="Settings"
+        component={Settings}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <AntDesign name="setting" size={24} color={color} />
           ),
         }}
       />

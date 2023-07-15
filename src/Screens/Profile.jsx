@@ -20,6 +20,7 @@ export default function Profile() {
         width={'50%'}
         altura={50}
         size={24}
+        color={'blue'}
         onPress={async () => {
           await AsyncStorage.removeItem('@token');
           dispatch(signOut());
