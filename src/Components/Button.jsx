@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
-// import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import { colors } from '../constants/colors';
 
 const Button = ({
@@ -17,15 +17,16 @@ const Button = ({
   navegar,
   width,
   margenT,
+  colortext,
 }) => {
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
 
   const navega = () => {
-    // navigation.navigate(navegar);
+    navigation.navigate(navegar);
   };
   return (
     <TouchableOpacity
-      // onPress={onPress ? onPress : navega}
+      onPress={onPress ? onPress : navega}
       style={[
         styles.button,
         {
@@ -41,7 +42,7 @@ const Button = ({
       className="px-2 border-2 "
     >
       <Entypo name={icon} size={size} color={color ? color : '#f1f1f1'} />
-      <Text style={styles.text}> {title} </Text>
+      <Text style={[styles.text, { color: colortext }]}> {title} </Text>
     </TouchableOpacity>
   );
 };
@@ -56,7 +57,6 @@ const styles = StyleSheet.create({
   text: {
     fontWeight: 'bold',
     fontSize: 16,
-    color: colors.ligth,
     marginLeft: 10,
   },
 });

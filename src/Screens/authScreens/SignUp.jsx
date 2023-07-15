@@ -29,6 +29,7 @@ export default function SignUp() {
         bgBotton={colors.primary}
         title={'Login'}
         redondo={8}
+        navegar={'login'}
       />
     </View>
   );
