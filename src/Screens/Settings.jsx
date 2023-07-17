@@ -12,6 +12,18 @@ export default function Settings() {
     <SafeAreaView style={globalStyle.screenContainer}>
       <Text style={globalStyle.title}>Settings</Text>
       <Button
+        title={'Profile'}
+        colortext={`${colors.secundary}`}
+        flex={'row'}
+        icon={'user'}
+        margenT={10}
+        width={'50%'}
+        altura={50}
+        size={24}
+        color={'blue'}
+        navegar={'Profile'}
+      />
+      <Button
         title={'Sign Out'}
         colortext={`${colors.secundary}`}
         flex={'row'}

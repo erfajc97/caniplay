@@ -38,6 +38,7 @@ export default function Login() {
         title={'Sign In'}
         redondo={8}
         onPress={() => save(token)}
+        colortext={colors.ligth}
       />
       <Button
         margenT={'3%'}
@@ -48,6 +49,7 @@ export default function Login() {
         title={'Sign Up'}
         redondo={8}
         navegar={'signup'}
+        colortext={colors.ligth}
       />
     </View>
   );

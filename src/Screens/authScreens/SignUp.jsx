@@ -20,6 +20,7 @@ export default function SignUp() {
         bgBotton={colors.primary}
         title={'Sign Up'}
         redondo={8}
+        colortext={colors.ligth}
       />
       <Button
         margenT={'3%'}
@@ -30,6 +31,7 @@ export default function SignUp() {
         title={'Login'}
         redondo={8}
         navegar={'login'}
+        colortext={colors.ligth}
       />
     </View>
   );

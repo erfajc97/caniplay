@@ -1,10 +1,11 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-// import Home from '../Screens/Home';
 import Profile from '../Screens/Profile';
 import Settings from '../Screens/Settings';
 import { AntDesign } from '@expo/vector-icons';
 import HomeStack from './HomeStack';
 import { colors } from '../constants/colors';
+import PlayLIstFav from '../Screens/PlayLIstFav';
+import SearchMusic from '../Screens/SearchMusic';
 
 const BottomTab = () => {
   const BtnTab = createBottomTabNavigator();
@@ -15,7 +16,7 @@ const BottomTab = () => {
         headerShown: false,
         title: '',
         tabBarStyle: {
-          backgroundColor: 'rgba(0,0,0,0.4)',
+          backgroundColor: 'rgba(0,0,0,0.2)',
           position: 'absolute',
           shadowOpacity: 4,
           shadowRadius: 4,
@@ -38,23 +39,36 @@ const BottomTab = () => {
         options={{
           tabBarIcon: ({ focused }) =>
             focused ? (
-              <AntDesign name="home" size={24} color={colors.primary} />
+              <AntDesign name="home" size={24} color={colors.secundary} />
             ) : (
               <AntDesign name="home" size={24} color={'white'} />
             ),
         }}
       />
       <BtnTab.Screen
-        name="Profile"
-        component={Profile}
+        name="Favorite"
+        component={PlayLIstFav}
         options={{
           tabBarIcon: ({ focused }) =>
             focused ? (
-              <AntDesign name="user" size={24} color={colors.primary} />
+              <AntDesign name="hearto" size={24} color={colors.secundary} />
             ) : (
-              <AntDesign name="user" size={24} color={'white'} />
+              <AntDesign name="hearto" size={24} color={'white'} />
             ),
-          headerShown: true,
+          // headerShown: true,
+        }}
+      />
+      <BtnTab.Screen
+        name="Search"
+        component={SearchMusic}
+        options={{
+          tabBarIcon: ({ focused }) =>
+            focused ? (
+              <AntDesign name="search1" size={24} color={colors.secundary} />
+            ) : (
+              <AntDesign name="search1" size={24} color={'white'} />
+            ),
+          // headerShown: true,
         }}
       />
       <BtnTab.Screen
@@ -63,7 +77,7 @@ const BottomTab = () => {
         options={{
           tabBarIcon: ({ focused }) =>
             focused ? (
-              <AntDesign name="setting" size={24} color={colors.primary} />
+              <AntDesign name="setting" size={24} color={colors.secundary} />
             ) : (
               <AntDesign name="setting" size={24} color={'white'} />
             ),

@@ -1,11 +1,11 @@
-import RootNavigator from './src/navigation/RootNavigator';
-import { Provider } from 'react-redux';
-import { store } from './src/app/store';
+import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
+import { SafeAreaView, StatusBar } from 'react-native';
+import Main from './Main';
 
 export default function App() {
   return (
-    <Provider store={store}>
-      <RootNavigator />
-    </Provider>
+    <SafeAreaView style={{ flex: 1, marginTop: StatusBar.currentHeight }}>
+      <Main />
+    </SafeAreaView>
   );
 }
