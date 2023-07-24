@@ -1,0 +1,53 @@
+ {
+    "artists": [
+      {
+        "id": 1,
+        "name": "Bad Bunny",
+        "image": "https://www.clarin.com/img/2022/05/06/bad-bunny-y-un-nuevo___ACFd6nyI5_2000x1500__1.jpg",
+        "songs": ["Where she goes", "Calladita"]
+      },
+      {
+        "id": 2,
+        "name": "Peso Pluma",
+        "image": "https://www.cmtv.com.ar/imagenes_artistas/3201.webp?Peso%20Pluma",
+        "songs": ["Ella Baila Sola", "Bzrp Music Sessions, Vol. 55"]
+      },
+      {
+        "id": 3,
+        "name": "Feid",
+        "image": "https://www.laprensa.hn/binrepository/900x900/0c0/0d0/none/11004/CONB/159947720-3808173852562394-4911075389_2218324_20220815155307.jpg",
+        "songs": ["Ferxxo 100", "Feliz Cumpleanos Ferxxo"]
+      },
+      {
+        "id": 4,
+        "name": "Rauw Alejandro",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdythMwwYhO0xeQ5xavwP_TO8M_jvGch08Bg",
+        "songs": ["Lokera", "Beso"]
+      }, {
+        "id": 5,
+        "name": "Myke Towers",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbvM80qIk_CG6G48KxnGtzjOrhPr8Mj8l5bw",
+        "songs": ["LALA", "Piensan"]
+      },
+      {
+        "id": 6,
+        "name": "Quevedo",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvX452B_htibohdc7Fi6ly5Z7rOANfZfyEhg",
+        "songs": ["Bzrp Music Sessions, Vol. 52", "Columbia"]
+      },
+      {
+        "id": 7,
+        "name": "Karol G",
+        "image": "https://viapais.com.ar/resizer/yZ6_KnpmH087KHUsGjcHngRyKsw=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/ZVSIZC6XGJCLDMHZEOEKZFKHSM.jpg",
+        "songs": ["S91", "Watati"]
+      },
+      {
+        "id": 8,
+        "name": "Ozuna",
+        "image": "https://www.clarin.com/img/2018/03/06/BkwVZjC_z_1256x620__2.jpg",
+        "songs": ["Hey Mor", "El Farzante"]
+      }
+     
+    ]
+  }
+  

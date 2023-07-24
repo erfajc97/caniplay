@@ -9,7 +9,12 @@ import { colors } from '../constants/colors';
 export default function Settings() {
   const dispatch = useDispatch();
   return (
-    <SafeAreaView style={globalStyle.screenContainer}>
+    <SafeAreaView
+      style={[
+        globalStyle.screenContainer,
+        { backgroundColor: `${colors.primary}` },
+      ]}
+    >
       <Text style={globalStyle.title}>Settings</Text>
       <Button
         title={'Profile'}
@@ -20,7 +25,7 @@ export default function Settings() {
         width={'50%'}
         altura={50}
         size={24}
-        color={'blue'}
+        color={`${colors.secundary}`}
         navegar={'Profile'}
       />
       <Button
@@ -32,7 +37,7 @@ export default function Settings() {
         width={'50%'}
         altura={50}
         size={24}
-        color={'blue'}
+        color={`${colors.secundary}`}
         onPress={async () => {
           await AsyncStorage.removeItem('@token');
           dispatch(signOut());

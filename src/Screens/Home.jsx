@@ -12,7 +12,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { colors } from '../constants/colors';
 import { useEffect, useState } from 'react';
 import Button from '../Components/Button';
-
+import Data from '../../data.json';
 export default function Home() {
   return (
     <View className="h-full" style={styles.bg}>
@@ -43,14 +43,16 @@ export default function Home() {
             <View>
               <Image
                 className=" ml-4 my-2 rounded-lg w-28 h-36"
-                source={require('../../assets/pxfuel.jpg')}
+                source={{ uri: `${Data.artists[1].image}` }}
               />
             </View>
             <View className="ml-14">
               <View>
-                <Text className="text-white font-bold text-2xl">Calladita</Text>
+                <Text className="text-white font-bold text-2xl">
+                  {Data.artists[1].songs[0]}
+                </Text>
                 <Text className="text-white font-semibold text-lg">
-                  “Bad Bunny”
+                  “{Data.artists[1].name}”
                 </Text>
               </View>
               <TouchableOpacity className="flex-row mt-2 justify-center items-center bg-[#73a3e7ec] p-2 rounded-full">
@@ -62,31 +64,19 @@ export default function Home() {
         </View>
         <View className="p-2">
           <Text className="text-2xl text-white font-bold">Trending...</Text>
-          <View className="flex-row mt-2 gap-x-5">
-            <FlatList
-              data={Array(3).fill(0)}
-              renderItem={() => (
-                <View className="flex-row rounded-md mb-1 justify-center items-center p-2  bg-[#00000053]">
-                  <Image
-                    className="w-10 h-10 rounded-xl"
-                    source={require('../../assets/Top50.jpg')}
-                  />
-                  <Text className="text-white ml-2">Top 50 USA</Text>
-                </View>
-              )}
-            />
-            <FlatList
-              data={Array(3).fill(0)}
-              renderItem={() => (
-                <View className="flex-row rounded-md mb-1 justify-center items-center p-2  bg-[#00000053]">
-                  <Image
-                    className="w-10 h-10 rounded-xl"
-                    source={require('../../assets/Top50.jpg')}
-                  />
-                  <Text className="text-white ml-2">Top 50 USA</Text>
-                </View>
-              )}
-            />
+          <View className=" flex-row flex-wrap mt-2 gap-x-5">
+            {Data.artists.map(artists => (
+              <TouchableOpacity
+                key={artists.id}
+                className="flex-row rounded-md mb-1 justify-center items-center p-2  bg-[#00000053]"
+              >
+                <Image
+                  className="w-10 h-10 rounded-xl"
+                  source={{ uri: `${artists.image}` }}
+                />
+                <Text className="text-white ml-2 w-28">{artists.songs[1]}</Text>
+              </TouchableOpacity>
+            ))}
           </View>
         </View>
         <View className="p-2">
@@ -96,16 +86,16 @@ export default function Home() {
           <View className="mt-2">
             <FlatList
               horizontal
-              data={Array(8).fill(0)}
-              renderItem={() => (
-                <View className="flex rounded-md mr-2 justify-center items-center p-2  bg-[#00000053]">
+              data={Data.artists}
+              renderItem={({ item }) => (
+                <TouchableOpacity className="flex rounded-md mr-2 justify-center items-center p-2  bg-[#00000053]">
                   <Image
                     className="w-32 h-32 rounded-xl"
-                    source={require('../../assets/rawAlejandro.jpg')}
+                    source={{ uri: `${item.image}` }}
                   />
-                  <Text className="text-white mt-2">Raw Alejandro </Text>
-                  <Text className="text-white mt-2">Music </Text>
-                </View>
+                  <Text className="text-white mt-2">{item.name} </Text>
+                  <Text className="text-white mt-2">{item.songs[0]} </Text>
+                </TouchableOpacity>
               )}
             />
           </View>
