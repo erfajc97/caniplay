@@ -4,19 +4,19 @@
         "id": 1,
         "name": "Bad Bunny",
         "image": "https://www.clarin.com/img/2022/05/06/bad-bunny-y-un-nuevo___ACFd6nyI5_2000x1500__1.jpg",
-        "songs": ["Where she goes", "Calladita"]
+        "songs": ["Where she goes", "Calladita","Safaera", "Yo Perreo Sola", "La Canción", "Callaíta", "Vete", "Mía", "I Like It", "Te Boté", "Amorfoda", "Sensualidad"]
       },
       {
         "id": 2,
         "name": "Peso Pluma",
         "image": "https://www.cmtv.com.ar/imagenes_artistas/3201.webp?Peso%20Pluma",
-        "songs": ["Ella Baila Sola", "Bzrp Music Sessions, Vol. 55"]
+        "songs": ["Ella Baila Sola", "Bzrp Music Sessions, Vol. 55", "La Bebé", "Tulum", "Por las Noches"]
       },
       {
         "id": 3,
         "name": "Feid",
         "image": "https://www.laprensa.hn/binrepository/900x900/0c0/0d0/none/11004/CONB/159947720-3808173852562394-4911075389_2218324_20220815155307.jpg",
-        "songs": ["Ferxxo 100", "Feliz Cumpleanos Ferxxo"]
+        "songs": ["Ferxxo 100", "Feliz Cumpleanos Ferxxo", "Classy 101" , "Ferxxo 100", "Niña Bonita (part. Sean Paul)","CHORRITO PA LAS ANIMAS","Normal","Zundada","FUMETEO"]
       },
       {
         "id": 4,

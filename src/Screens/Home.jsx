@@ -13,7 +13,8 @@ import { colors } from '../constants/colors';
 import { useEffect, useState } from 'react';
 import Button from '../Components/Button';
 import Data from '../../data.json';
-export default function Home() {
+import { useNavigation } from '@react-navigation/native';
+export default function Home({ navigation }) {
   return (
     <View className="h-full" style={styles.bg}>
       <View className="flex-row justify-start pt-4 px-2 items-center">
@@ -55,7 +56,15 @@ export default function Home() {
                   “{Data.artists[1].name}”
                 </Text>
               </View>
-              <TouchableOpacity className="flex-row mt-2 justify-center items-center bg-[#73a3e7ec] p-2 rounded-full">
+              <TouchableOpacity
+                onPress={() =>
+                  navigation.navigate('SongDeatil', {
+                    songData: Data.artists[1].songs[0],
+                    artName: Data.artists[1].name,
+                  })
+                }
+                className="flex-row mt-2 justify-center items-center bg-[#73a3e7ec] p-2 rounded-full"
+              >
                 <AntDesign name="playcircleo" size={24} color="white" />
                 <Text className="text-white ml-2">Play All</Text>
               </TouchableOpacity>
@@ -68,6 +77,9 @@ export default function Home() {
             {Data.artists.map(artists => (
               <TouchableOpacity
                 key={artists.id}
+                onPress={() =>
+                  navigation.navigate('ArtistProfile', { artistData: artists })
+                }
                 className="flex-row rounded-md mb-1 justify-center items-center p-2  bg-[#00000053]"
               >
                 <Image
@@ -88,7 +100,12 @@ export default function Home() {
               horizontal
               data={Data.artists}
               renderItem={({ item }) => (
-                <TouchableOpacity className="flex rounded-md mr-2 justify-center items-center p-2  bg-[#00000053]">
+                <TouchableOpacity
+                  onPress={() =>
+                    navigation.navigate('ArtistProfile', { artistData: item })
+                  }
+                  className="flex rounded-md mr-2 justify-center items-center p-2  bg-[#00000053]"
+                >
                   <Image
                     className="w-32 h-32 rounded-xl"
                     source={{ uri: `${item.image}` }}
