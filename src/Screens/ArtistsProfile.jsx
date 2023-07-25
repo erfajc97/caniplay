@@ -30,7 +30,7 @@ export default function ArtistsProfile({ route, navigation }) {
         />
         <View
           style={{ borderColor: `${colors.secundary}` }}
-          className="border-2 rounded-md w-[90%] p-2
+          className=" rounded-md w-[90%] p-2
           "
         >
           {artistData.songs.map((song, i) => (
@@ -41,8 +41,7 @@ export default function ArtistsProfile({ route, navigation }) {
                   artName: artistData.name,
                 })
               }
-              style={{ borderWidth: 2, borderColor: `${colors.secundary}` }}
-              className="rounded-lg p-2 my-2 flex-row justify-between "
+              className="bg-[#00000053] rounded-lg p-2 my-2 flex-row justify-between "
               key={i}
             >
               <Text className="text-white">{song}</Text>

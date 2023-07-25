@@ -30,10 +30,7 @@ export default function SondDetail({ route }) {
       className="pt-8 h-full px-2"
       style={{ backgroundColor: `${colors.primary}` }}
     >
-      <Text
-        style={{ color: colors.secundary }}
-        className="text-center text-4xl font-bold "
-      >
+      <Text className="text-center text-white text-4xl font-bold ">
         Now Playing
       </Text>
       <View className="flex mt-14 justify-center items-center">
