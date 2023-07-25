@@ -31,7 +31,10 @@ export default function SearchMusic() {
       </View>
       <ScrollView className="mx-2 bg-[#00000053] rounded-xl pl-4  mb-14 ">
         {Songs.songs.map((song, i) => (
-          <Text className="text-white flex flex-wrap mb-2  font-semibold text-xl">
+          <Text
+            key={i}
+            className="text-white flex flex-wrap my-2  font-semibold text-xl"
+          >
             {song}
           </Text>
         ))}
