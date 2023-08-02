@@ -6,7 +6,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { restoreToken } from '../feactures/auth/auth';
 import { useEffect } from 'react';
 import Splash from '../Screens/Splash';
-import BottomTab from './BottomTab';
+// import BottomTab from './BottomTab';
+import DrawerNavigation from './DrawerNavigation';
 
 const RootNavigator = () => {
   const { userToken, isLoading } = useSelector(state => state.auth);
@@ -34,7 +35,7 @@ const RootNavigator = () => {
 
   return (
     <NavigationContainer>
-      {userToken ? <BottomTab /> : <AuthStack />}
+      <DrawerNavigation />
     </NavigationContainer>
   );
 };

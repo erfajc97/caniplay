@@ -15,7 +15,7 @@ export default function Inputs({
       <TextInput
         className={`rounded-xl border-2 p-2 mt-4`}
         placeholder={label}
-        placeholderTextColor={placeColor ? placeColor : 'black'}
+        placeholderTextColor={placeColor ? placeColor : 'white'}
         style={{ borderColor: color ? color : `${colors.primary}` }}
         value={value}
         onChangeText={onChangeText}

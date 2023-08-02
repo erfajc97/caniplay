@@ -18,6 +18,7 @@ const Button = ({
   width,
   margenT,
   colortext,
+  borderColor,
 }) => {
   const navigation = useNavigation();
 
@@ -36,7 +37,7 @@ const Button = ({
           height: altura,
           width: width,
           marginTop: margenT,
-          borderColor: colors.primary,
+          borderColor: borderColor ? borderColor : '',
         },
       ]}
       className="px-2 border-2 "

@@ -17,15 +17,6 @@ import { useNavigation } from '@react-navigation/native';
 export default function Home({ navigation }) {
   return (
     <View className="h-full" style={styles.bg}>
-      <View className="flex-row justify-start pt-4 px-2 items-center">
-        <Image
-          className="w-10 h-10 rounded-full "
-          source={require('../../assets/logo.png')}
-        />
-        <Text className="text-fuchsia-50 ml-5 font-extrabold text-2xl">
-          Caniplay
-        </Text>
-      </View>
       <View className="flex-row gap-x-3 p-3">
         <TouchableOpacity className=" rounded-full bg-[#0050893b]  flex justify-center items-center p-1">
           <Text className="text-white">Music</Text>
