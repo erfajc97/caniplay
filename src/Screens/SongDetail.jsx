@@ -5,10 +5,7 @@ import { colors } from '../constants/colors';
 import { Entypo } from '@expo/vector-icons';
 import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import Video from 'react-native-video';
-import Track from '../../tracks_data.json';
 import { Audio } from 'expo-av';
-import { log } from 'react-native-reanimated';
 
 export default function SongDetail({ route }) {
   // const { songData, artName } = route.params;
