@@ -6,7 +6,7 @@ import { Entypo } from '@expo/vector-icons';
 import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-export default function SondDetail({ route }) {
+export default function SongDetail({ route }) {
   // const { songData, artName } = route.params;
   const [play, setPlay] = useState(true);
   const [like, setLike] = useState(false);

@@ -4,7 +4,7 @@ import Settings from '../Screens/Settings';
 import Home from '../Screens/Home';
 import Profile from '../Screens/Profile';
 import ArtistsProfile from '../Screens/ArtistsProfile';
-import SondDetail from '../Screens/SondDetail';
+import SongDetail from '../Screens/SongDetail';
 import { Entypo } from '@expo/vector-icons';
 import { Text, Pressable } from 'react-native';
 import { colors } from '../constants/colors';
@@ -32,7 +32,7 @@ export default function HomeStack({ navigation }) {
             },
           }}
           name="SongDeatil"
-          component={SondDetail}
+          component={SongDetail}
         />
         <HomeStack.Screen name="Home" component={Home} />
         <HomeStack.Screen
