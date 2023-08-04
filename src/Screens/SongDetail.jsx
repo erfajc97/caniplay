@@ -5,16 +5,64 @@ import { colors } from '../constants/colors';
 import { Entypo } from '@expo/vector-icons';
 import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
+import Video from 'react-native-video';
+import Track from '../../tracks_data.json';
+import { Audio } from 'expo-av';
+import { log } from 'react-native-reanimated';
 
 export default function SongDetail({ route }) {
   // const { songData, artName } = route.params;
   const [play, setPlay] = useState(true);
   const [like, setLike] = useState(false);
+  const [sound, setSound] = React.useState();
+  const [count, setCount] = useState(0);
   const navigation = useNavigation();
+
+  const albums = [
+    require('../../assets/trueno.mp3'),
+    require('../../assets/Quevedo.mp3'),
+    require('../../assets/Myke.mp3'),
+  ];
+
+  async function playSound() {
+    const { sound } = await Audio.Sound.createAsync(albums[count]);
+    setSound(sound);
+
+    await sound.playAsync();
+  }
+
+  React.useEffect(() => {
+    return sound
+      ? () => {
+          sound.unloadAsync();
+        }
+      : undefined;
+  }, [sound]);
 
   const startMusic = () => {
     setPlay(!play);
+    if (play == true) {
+      playSound();
+    } else {
+      setSound(null);
+    }
   };
+
+  function onNext() {
+    if (count == 2) {
+      setCount(0);
+    } else {
+      setCount(count + 1);
+    }
+  }
+
+  function onBack() {
+    if (count == 0) {
+      setCount(0);
+    } else {
+      setCount(count - 1);
+    }
+  }
 
   const likeMusic = () => {
     setLike(!like);
@@ -45,7 +93,7 @@ export default function SongDetail({ route }) {
 
       <View className="flex-row w-full  mt-2 justify-center items-center">
         <View>
-          <TouchableOpacity onPress={() => alert('Back')}>
+          <TouchableOpacity onPress={onBack}>
             <Entypo
               name={'controller-jump-to-start'}
               size={42}
@@ -68,7 +116,7 @@ export default function SongDetail({ route }) {
           )}
         </View>
         <View>
-          <TouchableOpacity onPress={() => alert('Next')}>
+          <TouchableOpacity onPress={onNext}>
             <Entypo name={'controller-next'} size={42} color={'#f1f1f1'} />
           </TouchableOpacity>
         </View>
